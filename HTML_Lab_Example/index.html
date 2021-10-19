@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+In this doc there are some html Elements examples and their usage.
+
+ATTENTION1: The doc is logically divided (using the <div> element) in a way that each piece
+of code that stands for a specific educational purpose is placed as a child of a 
+div element. THIS DOES NOT MEAN BY ANY REASON THAT THE FOLLOWING TAGS SHOULD BE ALWAYS
+INSIDE A DIV ELEMENT. Logical division should be used in a meaningful way as the 
+application requires.
+
+ATTENTION2: In this code I have used some <style> tags in order to show how the document
+structure is affected by an external source (e.g. CSS). AVOID USING style tags or style
+attributes inside the HTML doc. Use CSS instead.
+
+ATTENTION3: Try to use HTML Validator (there is a Link at the HTML Lab slides at e-learn)
+You will be able to see errors or warnings and in this way to understand how the HTML validator
+works. Validator Link: https://validator.w3.org/#validate_by_upload 
+Just upload the file in the mentioned link and press the "Check" button.
+-->
+<html>
+    <head>
+        <title>CS-359</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            p {color:blue;}
+			#highlight {color:red;}
+			.table {color:green;}
+        </style>
+    </head>
+
+    <body>
+	
+        <div id="1" class="header">
+            <!--h tag-->
+            <h1>CS-359 HTML DEMO</h1>
+        </div>
+
+		<a href = "#bottom">Go to the bottom of this page</a>
+		
+        <div id="2" class="paragraph">
+            <!--p tag-->
+            <p>Hello  HTML!</p> 
+        </div>
+
+        <div id="3" class="audio">
+            <!--audio tag-->
+            <audio controls>
+                <source src="mySongs/tetris.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio> 
+        </div>
+		
+
+        <div id="4" class="list">
+            <!--ul (unorderd) ol (ordered) list tags-->
+            <ul>
+				<div id="8" class="nestedList">
+					<li><a href="https://www.w3schools.com/html/html_intro.asp">W3School Tutorial Into</a></li>
+					<ol>
+						<li><p>What is HTML</p></li>
+						<li><p>Basic Elements</p></li>
+					</ol>
+					<li><a href="https://www.w3schools.com/html/html_editors.asp">W3School Tutorial Editors</a></li>
+					<ol>
+						<li><p>...</p></li>
+						<li><p>...</p></li>
+					</ol>
+				</div>
+            </ul>
+        </div>
+
+
+        <div id="5" class="table">
+            <!--table tag-->
+            <table border="10" width="50%">
+                <tr><th colspan="2">Form instructions</th></tr>
+                <tr><td>action</td> <td><em>Servlet or Script to be sent the submit request</em></td> </tr>
+                <tr><td>method</td> <td>get or post request <em><span id="highlight">use post when data is large or private</span></em></td> </tr>
+                <tr><td>name</td> <td>type your name here</td> </tr>
+                <tr><td>password</td> <td>type your password here <em>chars are replaced with bullets for privacy</em></td> </tr>
+                <tr><td>radio button</td> <td>only <strong>one can be checked</strong></td> </tr>
+                <tr><td>check box</td> <td><strong>none, one or more</strong> can be checked at the same time</td> </tr>
+                <tr><td>drop down menu</td> <td>Choose country from the html drop down menu</td> </tr>
+                <tr><td>submit</td> <td>submit and send request to server or script</td> </tr>
+                <tr><td>reset</td> <td>reset everything inside the form in default options</td> </tr>
+            </table>
+        </div>
+
+        <br><br>
+
+        <div id="6" class="form">
+            <!--form tag (IMPORTANT)-->
+            <form action="myJavaServlet" method="get">
+                <!--input tag (type="text")-->
+                <label>Name</label><input type="text" name="name" value="" /><br>
+
+                <!--input tag (type="password")-->
+                <label>Password</label><input type="password" name="pass" value="" /><br>
+
+                <!--select-option tag-->
+                <label>Country</label>
+                <select name="countries"> 
+                    <option value="usa"> USA </option>
+                    <option value="gr" selected=""> Greece </option>
+                    <option value="swiss" > Switzerland </option>
+                </select>
+
+                <br>
+
+                <!--input tag (type="radio")-->
+                <input type="radio" name="pet" value="student" checked/> student
+                <input type="radio" name="pet" value="teacher"/> teacher
+
+                <br>
+
+                <!--input tag (type="check box")-->
+                <label>Let us know your interests</label><br>
+                <input type="checkbox" name="sports" value="sports"> I like sports<br>
+                <input type="checkbox" name="science" value="science" checked> I like science<br>
+                <input type="checkbox" name="science" value="science"> I like music<br>
+
+                <!--input tag (type="submit")-->
+                <input type="submit" value="sbmt" /><br>
+
+                <!--input tag (type="reset")-->
+                <input type="reset" value="Clear form" /><br>
+            </form>
+        </div>
+        <br><br>
+
+        <div id="7" class="image">
+            <!--img (image) tag-->
+            <img src="myImages/uoc.jpg" alt="uoc" width="100" height="100" />
+        </div>
+		
+		<a name="bottom"><h2>Here is the bottom</h2></a>
+		
+    </body>
+</html>
