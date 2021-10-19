@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head> 
+        <script src="js/functions.js" defer></script>
+        <link rel="stylesheet" href="css/cssExamples.css">
+    </head>
+    <body>
+        <h2>HY 359-Examples</h2>
+        <div class="row">
+            <div class="column column1Width" style="background-color:#ADD8E6;">
+                <h1>Registration Form</h1>        
+					<form name="myForm"  onsubmit="return submitForm();">
+                    <label for="fname">First name:</label><br>
+                    <input type="text"  onchange="welcome();" id="fname"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" onchange="surname();" id="lname"> <br><br>
+                    <label for="pwd" >Password:</label><br>
+                    <input id="pwd" type="password" pattern=".{8,}" title="Eight or more characters" required>
+                    <br><br>
+                    Favorite Sports <br>
+                    <input type="checkbox" id="nba" name="sport" value="Basketball">
+                    <label for="nba">Basketball</label>
+                    <input type="checkbox" id="tennis" name="sport" value="Tennis">
+                     <label for="tenis">Tennis</label><br>
+					<input type="submit" class="button" value="Register">
+					</form>
+					
+					 
+                <br>	
+
+            </div>
+            <div class="column column2Width" id="output" style="background-color:#fffff0;">
+                <h2>Output</h2>
+                <div id="message" class="subColumn">Message</div>
+                <div id="image" class="subColumn">Image</div>    
+            </div>
+			
+        </div>
+
+    </body>
+
+</html>
