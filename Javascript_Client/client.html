@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="js/ajaxREST.js" defer></script>
+  <link rel="stylesheet" href="css/cssExamples.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="demo">
+<h2>Test REST</h2>
+        <div class="row">
+		
+		
+            <div class="column column1Width" id="choices" style="background-color:#ADD8E6;"> 
+			<h3> POST Request</h3>
+				<form id="myForm" name="myForm" onsubmit='addLaptop();return false;'>
+            <label for='name'>Laptop Name:</label>
+            <input id='name' type='text' name='name' required><br>
+            <label for='brand'>Laptop Brand:</label>
+            <input id='brand' type="text" name='brand' required><br>
+			<label for='core'>Laptop Cores:</label>
+            <input id='core' type="text" name='core' required><br>
+			<label for='memory'>Laptop Memory:</label>
+            <input id='memory' type="text" name='memory' required><br>
+			<label for='quantity'>Laptop Quantity:</label>
+            <input id='quantity' type="text" name='quantity' required><br>
+            <input type='submit' class="button" value="Add laptop"> <!-- Press this to submit form -->
+</form>
+
+			<h3> GET Request 1</h3>
+			<button type="button" onclick="getLaptops()" class="button">Get Laptops</button> <br>
+			<h3> GET Request 2</h3>
+
+			<label for='brand2'>Laptop Brand:</label>
+			<input id="brand2" type="text"><br><button type="button" onclick="getLaptopsOfBrand()" class="button" >Get Laptops of Brand</button>
+            
+			<h3> GET Request 3</h3>
+
+			<label for='memory2'>Memory:</label>
+			<input id="memory2" type="text"> <br>
+			<label for='core2'>Laptop Cores:</label>
+            <input id='core2' type="text" name='core2'><br>
+			
+			<button type="button" onclick="getLaptopsOfMemory_Core()" class="button">Get Laptops of Memory and optionally core</button>
+			
+			<h3> PUT Request</h3>
+			<label for='name2'>Laptop Name:</label>
+			<input id='name2' type="text" name='name2'><br>
+			<label for='quantity2'>Laptop Quantity:</label>
+            <input id='quantity2' type="number" name='quantity2'><br>
+			<button type="button" onclick="updateLaptop()" class="button">Update Laptop Quantity</button>
+			
+			<h3> DELETE Request</h3>
+			<label for='name3'>Laptop Name:</label>
+			<input id='name3' type="text" name='name3'><br>
+			<button type="button" onclick="deleteLaptop()" class="button">Delete Laptop</button>
+			
+			
+			</div>
+            <div class="column column2Width" id="output" style="background-color:#fffff0;">
+                <h2>Output</h2>
+                <div id="msg"></div>
+                  
+            </div>
+			
+        </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
