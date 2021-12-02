@@ -1,0 +1,14 @@
+SMAP
+example2_005fvariation_jsp.java
+JSP
+*S JSP
+*F
++ 0 example2_variation.jsp
+example2_variation.jsp
+*L
+5,12:44
+16,2:56
+17,2:58
+19,2:60,3
+21,2:66
+*E
